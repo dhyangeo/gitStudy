@@ -1,0 +1,22 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class Demo {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.ie.driver", "C:\\Users\\SONY\\Desktop\\eclipse-java-2021-06-R-win32-x86_64\\IEDriverServer_x64_3.150.2\\IEDriverServer.exe");
+		WebDriver driver = new InternetExplorerDriver();
+		//driver.get("https://www.google.com");
+		//driver.wait();
+		driver.navigate().to("https://www.udemy.com");
+		//System.out.println(driver.getTitle());
+		//driver.wait();
+		driver.findElement(By.xpath("(//div[@class='header--gap-auth-button--7KoL0']//a/span)[1]")).click();
+		driver.quit();
+	}
+
+}
